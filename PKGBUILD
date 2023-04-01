@@ -22,7 +22,6 @@ package() {
     mkdir -p $pkgdir/usr/bin
     mkdir -p -m 0755 $pkgdir/opt/$pkgname/
     mv $srcdir/mobalytics-repackager/dist/linux-unpacked/* $pkgdir/opt/$pkgname/
-    pwd
     install -Dm0644 -t "$pkgdir/usr/share/applications/" "../mobalytics-desktop.desktop"
     for size in 24 32 48 64 128 256 512; do
         install -Dm644 "$srcdir/mobalytics-repackager/app/resources/icons/${size}x${size}.png" \
